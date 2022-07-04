@@ -1,0 +1,40 @@
+{
+    "name": "YouTube Creator Website",
+    "description": "Website for youtube creators",
+    "website": "https://github.com/Brijeshkrishna/youtube-creator-website",
+    "keywords": ["Python", "Heroku","YouTube"],
+    "env": {
+      "VIDEOCOUNT": {
+        "description": "Total number of video to show",
+        "value": "20"
+      },
+      "CHANNEL_URL":{
+        "description": "Channel url"
+      },
+      "CHANNEL_NAME":{
+        "description": "Channel name"
+      },
+      "INSTAGRAM_URL":{
+        "description": "Instagram url",
+        "value": "https://www.instagram.com/"
+      },
+
+      "TWITTER_URL":{
+        "description":"Twitter url",
+        "value": "https://twitter.com/"
+      },
+      "BANNER_VIDEO_URL":{
+        "description":"YouTube video url or any direct video url for background"
+      },
+      "BANNER_VIDEO_LENGTH":{
+        "description":"Length of banner video in seconds",
+        "value": "10"
+      },
+      "BANNER_VIDEO_RESOLUTION":{
+        "description":"Resolution of banner video only for youtube video",
+        "value": "360p"
+      }
+  
+     }
+  
+  }

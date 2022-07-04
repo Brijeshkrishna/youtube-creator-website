@@ -1,0 +1,518 @@
+<title>{{social['CHANNEL_NAME']}}</title>
+
+<link rel="icon" type="image/x-icon" href="{{url_for('static',filename='img/favicon.ico')}}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+<head>
+    <meta name="viewport" content="width=1024">
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+
+<body>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+        html,
+        body {
+            height: 100%;
+            font-weight: 800;
+            background-color: #1e1e20;
+            font-family: 'Electrolize', sans-serif;
+        }
+
+        body {
+            background: #030321;
+            font-family: Arial;
+            background-image: "{{url_for('static',filename='img/watermaker.png')}}";
+            background-position: left;
+        }
+
+        svg {
+            display: block;
+            font: 10.5em "Montserrat";
+            width: 960px;
+            height: 300px;
+            margin: 0 0;
+        }
+
+        .text-copy {
+            fill: none;
+            stroke: white;
+            stroke-dasharray: 6% 29%;
+            stroke-width: 5px;
+            stroke-dashoffset: 0%;
+            animation: stroke-offset 5.5s infinite linear;
+        }
+
+        .text-copy:nth-child(1) {
+            stroke: #4d163d;
+            animation-delay: -1;
+        }
+
+        .text-copy:nth-child(2) {
+            stroke: #840037;
+            animation-delay: -2s;
+        }
+
+        .text-copy:nth-child(3) {
+            stroke: #bd0034;
+            animation-delay: -3s;
+        }
+
+        .text-copy:nth-child(4) {
+            stroke: #bd0034;
+            animation-delay: -4s;
+        }
+
+        .text-copy:nth-child(5) {
+            stroke: #fdb731;
+            animation-delay: -5s;
+        }
+
+        @keyframes stroke-offset {
+            100% {
+                stroke-dashoffset: -35%;
+            }
+        }
+    </style>
+
+    <div style="background:#030321;">
+        <svg viewBox="0 0 1300 200" style="background-color: #030321;width:100% ">
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="80%">{{social['CHANNEL_NAME']}}</text>
+
+            </symbol>
+
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+        </svg>
+        <link rel='stylesheet' id='main-stylesheet-css' href='../static/style/style.css' type='text/css' media='all' />
+
+
+        <style>
+            .home-stats {
+                background: #030321 url() no-repeat center center;
+
+                color: rgb(211, 221, 157);
+                background-size: cover;
+            }
+
+            ::-webkit-scrollbar {
+                display: none;
+                -ms-overflow-style: none;
+            }
+
+            .home-stats .stat-number {
+                font-family: "Bebas Neue", "Helvetica Neue", Helvetica, "Arial Narrow", sans-serif;
+                font-size: 10.375rem;
+                font-weight: 600;
+                color: rgb(211, 221, 157);
+
+
+            }
+
+            .home-stats .stat-number {
+                display: flex;
+                justify-content: center;
+            }
+
+            .home-stats .social-property {
+
+                font-size: 1.6rem;
+                color: rgb(224, 153, 153);
+
+            }
+        </style>
+
+
+        <section id="section3" class="home-stats overlay feature-section cd-section" style="
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 1px;
+">
+            <div class="row">
+
+                <div class="stat-list  columns" style="margin-bottom: 25px;">
+
+                    <div class="stat-group medium-6 large-3 columns">
+                        <span class="stat-number">
+                            <style>
+                                .shadows {
+                                    position: relative;
+                                    text-transform: uppercase;
+                                    text-shadow: -25px 5px 10px #4a596e;
+                                    color: rgb(255, 255, 255);
+                                    letter-spacing: -0.05em;
+                                    font-family: "Anton", Arial, sans-serif;
+                                    -webkit-user-select: none;
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    user-select: none;
+                                    text-transform: uppercase;
+                                    font-size: 200px;
+                                    transition: all 0.25s ease-out;
+                                    width: 100%;
+                                    text-shadow: -16px 6px 100px #63a154;
+
+                                }
+                            </style>
+                            <div class="container">
+                                <div class="shadows">
+
+                                    <span>{{subcriber}}</span>
+
+                                </div>
+                            </div>
+                        </span>
+                        <span class="social-property">
+
+                            subscribers on YouTube</span>
+                        <a class="button ghost-primary tiny" href={{ social["CHANNEL_URL"] }}
+                            target="_blank">Subscribe</a>
+                        <br>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /row -->
+        </section>
+    </div>
+    <div>
+        <style>
+            #myVideo {
+                width: 100%;
+                margin-bottom: 10px;
+                background-color: #030321;
+
+
+            }
+
+            /* Add some content at the bottom of the video/page */
+            .content {
+                position: fixed;
+                bottom: 0;
+                background: #030321;
+                color: #f1f1f1;
+                width: 100%;
+                padding: 10px;
+            }
+        </style>
+        <video autoplay muted loop id="myVideo">
+            <source src="{{ url_for('static',filename='video/intro.mp4') }}" type="video/mp4">
+        </video>
+
+
+    </div>
+    <style>
+        .line-title {
+            -webkit-text-size-adjust: 100%;
+            cursor: auto;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            padding: 0;
+            color: #141414;
+            font-family: "Bebas Neue", "Helvetica Neue", Helvetica, "Arial Narrow", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: .03em;
+            text-rendering: optimizeLegibility;
+            font-size: 2.3125rem;
+            margin: 3.5rem 0 3.125rem;
+            border-spacing: 1rem 0;
+            display: table;
+            line-height: .1;
+            table-layout: auto;
+            text-align: center;
+            white-space: nowrap;
+            width: 100%;
+
+        }
+
+        .des {
+
+
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+
+        }
+    </style>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+        .leaderboard {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .leaderboard header {
+            --start: 15%;
+            height: 120px;
+            background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(54, 89, 219, 0.33) 10%, rgba(54, 89, 219, 0.33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
+            color: #fff;
+            position: relative;
+            border-radius: 12px 12px 0 0;
+            overflow: hidden;
+        }
+
+        .leaderboard header .leaderboard__title {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            right: calc(var(--start) * .75);
+            transform: translateY(-50%);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .leaderboard header .leaderboard__title span {
+            display: block;
+        }
+
+        .leaderboard header .leaderboard__title--top {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 6.5px;
+        }
+
+        .leaderboard header .leaderboard__title--bottom {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 3.55px;
+            opacity: 0.65;
+            transform: translateY(-2px);
+        }
+
+        .leaderboard__profiles {
+            background-color: #fff;
+            border-radius: 0 0 12px 12px;
+            padding: 15px 15px 20px;
+            display: grid;
+            row-gap: 8px;
+        }
+
+        .leaderboard__profile {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            align-items: center;
+            padding: 10px 30px 10px 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+            cursor: pointer;
+            transition: transform 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98), box-shadow 0.25s cubic-bezier(0.7, 0.98, 0.86, 0.98);
+            background-color: #fff;
+        }
+
+        .leaderboard__picture {
+            max-width: 100%;
+            width: 60px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #ebeef3, 0 0 0 22px #f3f4f6;
+        }
+
+        .leaderboard__name {
+
+            font: 1.5em "Montserrat";
+            color: #000000;
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.64px;
+            margin-left: 12px;
+        }
+
+        .leaderboard__value {
+            color: #35d8ac;
+            font-weight: 700;
+            font-size: 34px;
+            text-align: right;
+        }
+
+        .leaderboard__value>span {
+            opacity: 0.8;
+            font-weight: 600;
+            font-size: 13px;
+            margin-left: 3px;
+        }
+
+
+
+        .leaderboard {
+            box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+    <h2 class="line-title" style="color:bisque ; font-family:'Electrolize'">Latest Videos</h2>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script>
+
+    <div class="small-12 columns">
+        <div class="video-grid-container "
+            style="background : rgb(255,255,255) url() no-repeat center center ;background-color: #1e1e20;">
+
+            <ul class="small-block-grid-1 medium-block-grid-4 high-block-grid-3" id="pre" ,style="color:antiquewhite">
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        let i = 0;
+        let flag = 1;
+
+
+        var data = {{ html_data | tojson  }};
+
+        function appendChildtohtml () {
+            if (i == data.length) {
+                flag = 0;
+                return 0;
+            }
+
+            var ul = document.getElementById("pre");
+            var li = document.createElement("li");
+
+            li.innerHTML = "<li> <a data-fancybox=\"\" target=\"_blank\"  class=\"video fancybox.iframe video-container\" title=\"Play\" href='https://www.youtube.com/watch?v=" + data[i]['videoId'] + "'><div class=\"video-overlay\"> <div class=\"middle-center\"></div></div><img src='https://img.youtube.com/vi_webp/" + data[i]['videoId'] + "/mqdefault.webp' width=100% height=auto ></a><div><h4 style = \"color:antiquewhite ;font-family: 'Electrolize', sans-serif;\"  class=\"des\">" + data[i]['title'] + "</h4></div></li>";
+            ul.appendChild(li);
+            i++;
+
+        }
+        if ($(window).height() + 20 >= getDocHeight()) {
+            appendChildtohtml();
+            appendChildtohtml();
+            appendChildtohtml();
+            appendChildtohtml();
+        }
+        appendChildtohtml();
+        appendChildtohtml();
+        appendChildtohtml();
+        appendChildtohtml();
+
+        function getDocHeight () {
+            var D = document;
+            return Math.max(
+                D.body.scrollHeight, D.documentElement.scrollHeight,
+                D.body.offsetHeight, D.documentElement.offsetHeight,
+                D.body.clientHeight, D.documentElement.clientHeight
+            );
+        }
+
+
+
+        $(window).scroll(function () {
+
+
+            if ((($(window).scrollTop() + $(window).height()) | 0) >= getDocHeight() - 600) {
+
+                appendChildtohtml();
+                appendChildtohtml();
+                appendChildtohtml();
+                appendChildtohtml();
+
+
+            }
+        });
+
+
+    </script>
+
+
+    <style>
+        .footer-basic {
+            padding: 15px 0;
+            background-color: #ffffff;
+            color: #4b4c4d;
+        }
+
+        .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .footer-basic li {
+            padding: 0 10px;
+        }
+
+        .footer-basic ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .footer-basic ul a:hover {
+            opacity: 1;
+        }
+
+        .footer-basic .social {
+            text-align: center;
+            padding-bottom: 25px;
+        }
+
+        .footer-basic .social>a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            padding-top: 5px;
+
+
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 50px;
+            color: inherit;
+            opacity: 0.75;
+        }
+
+        .footer-basic .social>a:hover {
+            color: #31fddf;
+            background-color: transparent;
+
+        }
+    </style>
+    <h5 class="line-title" style="color:bisque ; font-family:'Electrolize'">Follow Us</h5>
+
+    <div class="footer-basic" style="background: seashell;">
+        <footer>
+            <div class="social">
+
+                <a href="Instagram" target="popup" onclick="window.open('{{ social[" INSTAGRAM_URL"] }}')"><i
+                        class="icon ion-social-instagram" id="ins"></i></a>
+                <a href="Youtube" target="popup" onclick="window.open('{{ social[" CHANNEL_URL"] }}')"><i
+                        class="icon ion-social-youtube" id="you"></i></a>
+
+                <a href="Twitter" target="popup" onclick="window.open('{{ social[" TWITTER_URL"] }}')"><i
+                        class="icon ion-social-twitter" id="twi"></i></a>
+            </div>
+        </footer>
+
+        <style>
+            #sa {
+
+
+                text-align: right;
+
+
+
+            }
+        </style>
+    </div>
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
