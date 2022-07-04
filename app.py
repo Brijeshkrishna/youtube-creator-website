@@ -26,7 +26,7 @@ BANNER_VIDEO_LENGTH = int(os.environ["BANNER_VIDEO_LENGTH"])
 
 def setVidFav(video_url, fav_url, video_len=10, res="360"):
     print("Downloading video")
-    with open("./src/static/video/temp.mp4", "wb") as f:
+    with open("src/static/video/temp.mp4", "wb") as f:
         if "https://www.youtube.com" in video_url:
             r = YouTube(video_url).streams.get_by_resolution(res + "p").url
         else:
