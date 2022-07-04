@@ -42,8 +42,9 @@ def setVidFav(video_url, fav_url, video_len=10, res="360"):
         targetname="src/static/video/intro.mp4",
     )
     os.remove("src/static/video/temp.mp4")
-    with open("./src/static/img/favicon.ico", "wb") as f:
-        f.write(requests.get(fav_url).content)
+    if fav_url is None:
+        with open("./src/static/img/favicon.ico", "wb") as f:
+            f.write(requests.get(fav_url).content)
 
 
 setVidFav(BANNER_VIDEO_URL, FAVICON_URL, BANNER_VIDEO_LENGTH)

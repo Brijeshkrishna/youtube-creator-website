@@ -33,6 +33,9 @@
       "BANNER_VIDEO_RESOLUTION":{
         "description":"Resolution of banner video only for youtube video",
         "value": "360p"
+      },
+      "FAVICON_URL":{
+        "description":"favicon icon"
       }
   
      }
