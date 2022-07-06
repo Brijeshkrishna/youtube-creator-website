@@ -26,7 +26,8 @@ BANNER_VIDEO_LENGTH = int(os.environ["BANNER_VIDEO_LENGTH"])
 
 def setVidFav(video_url, fav_url, video_len=10, res="360"):
     print("Downloading video")
-    with open("src/static/video/temp.mp4", "wb") as f:
+    video_path = os.path.abspath("src/static/video/temp.mp4")
+    with open(video_path, "wb") as f:
         if "https://www.youtube.com" in video_url:
             r = YouTube(video_url).streams.get_by_resolution(res + "p").url
         else:
@@ -36,12 +37,12 @@ def setVidFav(video_url, fav_url, video_len=10, res="360"):
 
     print("Loading video")
     ffmpeg_extract_subclip(
-        "src/static/video/temp.mp4",
+        video_path,
         0,
         video_len,
         targetname="src/static/video/intro.mp4",
     )
-    os.remove("src/static/video/temp.mp4")
+    os.remove(video_path)
     if fav_url is None:
         with open("./src/static/img/favicon.ico", "wb") as f:
             f.write(requests.get(fav_url).content)
@@ -100,3 +101,5 @@ def response():
     return render_template(
         "index.html", html_data=list(VIDEO_LIST), subcriber=subcriber, social=SOCIAL
     )
+
+
