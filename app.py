@@ -65,6 +65,7 @@ except:
 channel_root = Channel(CHANNEL_URL)
 j = 0
 for i in channel_root.video_urls:
+    print(i)
     VIDEO_LIST = np.append(
         VIDEO_LIST, {"videoId": i.split("=")[1], "title": YouTube(i).title}
     )
