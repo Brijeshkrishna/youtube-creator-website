@@ -65,14 +65,9 @@
         <div class="footer-basic" style="background: seashell;">
                 <footer>
                 <div class="social">
-                
-                    <a href="Instagram" target="popup" href='{{ social[" INSTAGRAM_URL"] }}'><i
-                            class="icon ion-social-instagram" id="ins"></i></a>
-                    <a href="Youtube" target="popup" href= '{{ social[" CHANNEL_URL"] }}'><i
-                            class="icon ion-social-youtube" id="you"></i></a>
-                    <a href="Twitter" target="popup" href='{{ social[" TWITTER_URL"] }}'><i
-                            class="icon ion-social-twitter" id="twi"></i></a>
-                    
+                    <a target="popup" href={{ social['INSTAGRAM_URL'] }} ><i class="icon ion-social-instagram" id="ins" ></i></a>
+                    <a target="popup" href={{ social['CHANNEL_URL'] }} ><i class="icon ion-social-youtube" id="you"></i></a>
+                    <a target="popup" href={{ social['TWITTER_URL'] }}><i class="icon ion-social-twitter" id="twi"></i></a>
                 </div>
                 </footer>
         </div>
