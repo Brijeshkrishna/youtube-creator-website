@@ -2136,18 +2136,6 @@ body {
     display: none
 }
 
-.home-stats {
-    color: #fff;
-    background: #000 url(/wp-content/themes/DudePerfect/assets/images/backgrounds/dude-perfect-sport-logo-mobile.jpg) no-repeat center center;
-    background-size: auto 100%
-}
-
-@media screen and (min-width:64em) {
-    .home-stats {
-        background-image: url(/wp-content/themes/DudePerfect/assets/images/backgrounds/dude-perfect-sport-logo-mobile.jpg);
-        background-size: 50%
-    }
-}
 
 @media screen and (min-width:90em) {
     .home-stats {
