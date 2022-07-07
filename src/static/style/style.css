@@ -2259,12 +2259,6 @@ body {
     }
 }
 
-.home-videos,
-.video-section {
-    background: #f5f5f5 url(/wp-content/themes/DudePerfect/assets/images/backgrounds/bg-prisms.jpg) repeat;
-    background-size: 50%
-}
-
 .video-grid-container {
     margin-bottom: 5rem
 }
